@@ -1,0 +1,51 @@
+name: Deploy Next.js to Ubuntu VPS
+
+on:
+  push:
+    branches:
+      - dev
+  pull_request:
+    branches:
+      - dev
+  workflow_dispatch: {}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+   
+    steps:
+      - name: Checkout frontend code
+        uses: actions/checkout@v3
+
+      - name: Copy frontend files to VPS
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: 14.225.255.106
+          username: root
+          port: 22
+          password: ${{ secrets.VPS_PASSWORD }}
+          source: "."  # Toàn bộ project
+          target: "/root/frontend_portfolio"  # Thư mục FE trên VPS
+          overwrite: true
+
+      - name: Deploy frontend via SSH
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          host: 14.225.255.106
+          username: root
+          port: 22
+          password: ${{ secrets.VPS_PASSWORD }}
+          timeout: 1200s
+          command_timeout: 1200s
+          script: |
+            set -e
+            cd /root/frontend_portfolio
+
+            echo "Stopping existing frontend container..."
+            docker compose down || true
+
+            echo "Pruning Docker..."
+            docker system prune -af || true
+
+            echo "Starting new frontend container..."
+            docker compose up -d --build
