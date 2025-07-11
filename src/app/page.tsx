@@ -38,6 +38,11 @@ export default function Home() {
       answer:
         "With Sun Design, you can easily create custom boards and invite multiple users to collaborate on projects. Manage tasks, feedback, and files in one place — teamwork has never been smoother.",
     },
+    {
+      question: "Why do I need to connect Google Drive?",
+      answer:
+        "Sun Design uses Google OAuth to help designers securely upload designs to their own Google Drive and share files directly with customers.",
+    },
   ];
 
   const testimonials = [
@@ -274,6 +279,11 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <p className="text-sm text-gray-300 leading-relaxed text-center mt-4">
+            All-in-one for design, order management, transaction management.
+            Designers securely connect their Google Drive via OAuth to upload
+            and share files directly with customers.
+          </p>
         </div>
       </section>
 
