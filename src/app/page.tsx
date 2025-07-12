@@ -4,6 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
 import { FaFacebookF, FaInstagram, FaTiktok, FaZhihu } from "react-icons/fa";
+import ImageSlider from "./components/Slider";
 
 export default function Home() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -75,6 +76,44 @@ export default function Home() {
       role: "Sales Manager",
       avatar: "/image5.jpg?height=48&width=48",
       text: "Sun Design makes my entire operation simpler — from submitting design requests to managing payments and feedback. It’s perfect for scaling my business without the usual chaos.",
+    },
+  ];
+
+  // Dữ liệu ảnh mẫu (bạn có thể thay thế bằng ảnh thực của mình)
+  const imagesAfterBefore = [
+    {
+      src: "./ab1.jpg",
+      title: "",
+      description: "",
+    },
+    {
+      src: "./ab2.jpg",
+      title: "",
+      description: "",
+    },
+    {
+      src: "./ab3.jpg",
+      title: "",
+      description: "",
+    },
+    {
+      src: "./ab4.jpg",
+      title: "",
+      description: "",
+    },
+  ];
+
+  // Dữ liệu ảnh mẫu (bạn có thể thay thế bằng ảnh thực của mình)
+  const imagesBanner = [
+    {
+      src: "./banner2.jpg",
+      title: "",
+      description: "",
+    },
+    {
+      src: "./preview.png",
+      title: "",
+      description: "",
     },
   ];
 
@@ -160,34 +199,54 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Content - 3D Elements */}
-            <div className="relative flex justify-center items-center">
-              {/* 3D Geometric Shapes */}
-              <div className="relative w-96 h-96">
-                {/* Top row cubes */}
-                <div className="absolute top-0 left-16 w-20 h-20 bg-gradient-to-br from-pink-400 to-purple-500 rounded-lg transform rotate-12 shadow-2xl"></div>
-                <div className="absolute top-8 left-32 w-24 h-24 bg-gradient-to-br from-orange-400 to-pink-500 rounded-lg transform -rotate-6 shadow-2xl"></div>
-                <div className="absolute top-4 right-16 w-18 h-18 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-lg transform rotate-45 shadow-2xl"></div>
+            {/* Right Content - 6 Images So Le */}
+            <div className="relative grid grid-cols-2 gap-4 w-full max-w-md mx-auto">
+              {/* 4 Ảnh chính */}
+              <img
+                src="./person1.jpg"
+                alt="Person 1"
+                className="w-full rounded-2xl object-cover shadow-xl transform rotate-[-6deg]"
+              />
+              <img
+                src="./person4.jpg"
+                alt="Person 2"
+                className="w-full rounded-2xl object-cover shadow-xl transform rotate-[6deg] translate-y-6"
+              />
+              <img
+                src="./person3.jpg"
+                alt="Person 3"
+                className="w-full rounded-2xl object-cover shadow-xl transform rotate-[4deg] -translate-y-6"
+              />
+              <img
+                src="./person6.jpg"
+                alt="Person 4"
+                className="w-full rounded-2xl object-cover shadow-xl transform rotate-[-4deg]"
+              />
 
-                {/* Middle row cubes */}
-                <div className="absolute top-24 left-8 w-16 h-16 bg-gradient-to-br from-teal-400 to-blue-500 rounded-lg transform rotate-6 shadow-2xl"></div>
-                <div className="absolute top-32 right-8 w-22 h-22 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg transform -rotate-12 shadow-2xl"></div>
+              {/* Ảnh nhỏ bay top-left */}
+              <img
+                src="./person5.jpg"
+                alt="Person 5"
+                className="absolute -top-10 -left-10 w-24 h-24 rounded-full object-cover shadow-lg border-4 border-white"
+              />
 
-                {/* Bottom row cubes */}
-                <div className="absolute bottom-16 left-20 w-20 h-20 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-lg transform rotate-24 shadow-2xl"></div>
-                <div className="absolute bottom-8 right-20 w-24 h-24 bg-gradient-to-br from-blue-400 to-teal-500 rounded-lg transform -rotate-18 shadow-2xl"></div>
-                <div className="absolute bottom-20 left-40 w-16 h-16 bg-gradient-to-br from-pink-400 to-red-500 rounded-lg transform rotate-36 shadow-2xl"></div>
-              </div>
+              {/* Ảnh nhỏ bay bottom-right */}
+              <img
+                src="./person2.jpg"
+                alt="Person 6"
+                className="absolute -bottom-10 -right-10 w-24 h-24 rounded-full object-cover shadow-lg border-4 border-white"
+              />
             </div>
           </div>
 
           {/* Dashboard Preview */}
           <div className="mt-20">
             <div className="bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-3xl p-8 backdrop-blur-sm border border-white/10">
-              <h3 className="text-center mb-2 font-semibold text-3xl text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300">
+              <ImageSlider images={imagesBanner} />
+              {/* <h3 className="text-center mb-2 font-semibold text-3xl text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300">
                 Preview website
               </h3>
-              <img className="rounded-3xl" src="./preview.png"></img>
+              <img className="rounded-3xl" src="./preview.png"></img> */}
             </div>
           </div>
         </div>
@@ -236,49 +295,7 @@ export default function Home() {
           </div>
 
           {/* Feature Cards */}
-          <div className="grid md:grid-cols-2 gap-8 items-start">
-            {/* Main Images Card */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 relative overflow-hidden">
-              <div className="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-600 rounded-2xl transform rotate-12 opacity-80"></div>
-              <h3 className="text-2xl font-bold mb-6 text-left">Raw Image</h3>
-              <p className="text-gray-300 text-left mb-8 leading-relaxed">
-                Rough piece
-              </p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="aspect-square bg-gray-200 rounded-xl overflow-hidden hover:scale-150">
-                  <Image
-                    src="/prev.jpeg"
-                    alt="Product example preview"
-                    width={400}
-                    height={400}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Creators AI-Matching Card */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 relative overflow-hidden">
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-600 rounded-2xl transform rotate-12 opacity-80"></div>
-              <h3 className="text-2xl font-bold mb-4 text-left">
-                After Sun Design
-              </h3>
-              <p className="text-gray-300 text-left mb-8 leading-relaxed">
-                Better than you want.
-              </p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="aspect-square bg-gray-200 rounded-xl overflow-hidden hover:scale-150">
-                  <Image
-                    src="/after.jpg"
-                    alt="Product example after"
-                    width={400}
-                    height={400}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+          <ImageSlider images={imagesAfterBefore} />
           <p className="text-sm text-gray-300 leading-relaxed text-center mt-4">
             All-in-one for design, order management, transaction management.
             Designers securely connect their Google Drive via OAuth to upload
