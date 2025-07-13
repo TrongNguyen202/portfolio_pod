@@ -117,6 +117,15 @@ export default function Home() {
     },
   ];
 
+  const imagesIcon = [
+    "./logos/tiktok.png",
+    "./logos/amazone.jpeg",
+    "./logos/ebay.png",
+    "./logos/shopify.png",
+    "./logos/etsy.png",
+    "./logos/walmart.png",
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
       <Head>
@@ -616,6 +625,52 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="px-8 py-16 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+        {/* Brand Partner Slider Section */}
+        {/* Background decorative elements */}
+        <div className="absolute top-0 left-0 w-64 h-64 bg-blue-600 rounded-full opacity-20 blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-600 rounded-full opacity-20 blur-3xl"></div>
+
+        <div className="relative z-10 max-w-6xl mx-auto mb-12">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Trusted by Brands Worldwide
+            </h2>
+          </div>
+
+          {/* Slider */}
+          <div className="overflow-hidden">
+            <div
+              className="flex gap-16"
+              style={{
+                width: "max-content",
+                animation: "slide 20s linear infinite",
+              }}
+            >
+              {/* Duplicate icons for seamless loop */}
+              {[...imagesIcon, ...imagesIcon].map((src, i) => (
+                <img
+                  key={i}
+                  src={src}
+                  alt="Brand logo"
+                  className="h-12 w-auto flex-shrink-0 object-contain opacity-80 hover:opacity-100 transition"
+                />
+              ))}
+            </div>
+
+            {/* Inline Keyframes */}
+            <style jsx>{`
+              @keyframes slide {
+                0% {
+                  transform: translateX(0);
+                }
+                100% {
+                  transform: translateX(-50%);
+                }
+              }
+            `}</style>
+          </div>
+        </div>
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center text-center space-y-8">
             {/* Logo & Brand */}
