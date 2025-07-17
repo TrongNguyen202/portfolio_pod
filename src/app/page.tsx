@@ -20,24 +20,39 @@ export default function Home() {
         "We are your trusted partner, ready to turn any idea into reality with our team of experienced and dedicated designers.",
     },
     {
-      question: "Can I try Sun Design for free before making a payment?",
-      answer:
-        "Absolutely! You can experience our services with no upfront cost. Just contact us and enjoy a free trial instantly.",
-    },
-    {
-      question: "Is there a limit to how many designs I can create?",
-      answer:
-        "There’s no limit at all — you can create unlimited orders. As long as you have ideas, we’re here to bring them to life as fast as possible.",
-    },
-    {
       question: "How do I make payments?",
       answer:
         "Simply create a top-up request and you’ll instantly get a secure QR code. Just scan it — your payment will be processed automatically. Plus, enjoy an extra 3% bonus added to every top-up amount!",
     },
     {
-      question: "How do I work with multiple designers or teams?",
+      question: "What custom design services do you offer?",
       answer:
-        "With Sun Design, you can easily create custom boards and invite multiple users to collaborate on projects. Manage tasks, feedback, and files in one place — teamwork has never been smoother.",
+        "We offer comprehensive custom design services including POD design, print on demand graphics, logo design, brand identity, social media graphics, and digital marketing materials. Our expert designers work with you to create unique designs tailored to your specific needs.",
+    },
+    {
+      question: "How does your POD design service work?",
+      answer:
+        "Our POD design service is streamlined for e-commerce sellers. Simply submit your design brief, and our professional designers will create custom graphics for your print on demand products. We specialize in designs for TikTok Shop, Amazon, Shopify, Etsy, and other major platforms.",
+    },
+    {
+      question: "What's the turnaround time for custom designs?",
+      answer:
+        "Most custom design projects are completed within 24-48 hours. For complex projects like complete brand identity or large POD collections, we provide detailed timelines upfront. Rush orders are available for urgent needs.",
+    },
+    {
+      question: "Do you provide design revisions?",
+      answer:
+        "Yes! We include unlimited revisions with every custom design project. Our goal is to ensure you're completely satisfied with your design before final delivery.",
+    },
+    {
+      question: "Can you help with design for multiple platforms?",
+      answer:
+        "Absolutely! We create custom designs optimized for various platforms including TikTok Shop, Amazon, Shopify, Etsy, Facebook, Instagram, and more. Each design is tailored to meet platform-specific requirements.",
+    },
+    {
+      question: "What file formats do you deliver?",
+      answer:
+        "We deliver designs in all major formats including PNG, JPEG, PDF, SVG, and AI. For POD designs, we provide high-resolution files optimized for printing and digital use.",
     },
     {
       question: "Why do I need to connect Google Drive?",
@@ -51,31 +66,32 @@ export default function Home() {
       name: "Pham Thanh An",
       role: "TikTok Shop Seller",
       avatar: "/image1.jpg?height=48&width=48",
-      text: "Sun Design's creator matching is truly a game-changer! Finding the right designers and creators for my brand has never been this easy. My affiliate network keeps growing — so do my sales!",
+
+      text: "Sun Design's custom POD designs have transformed my online store. Their print on demand graphics are professional, trendy, and convert incredibly well. Sales have increased by 300% since working with them!",
     },
     {
       name: "Do Duc Tuan",
       role: "Sales Executive",
       avatar: "/image2.jpg?height=48&width=48",
-      text: "Thanks to Sun Design, I can launch product listings in no time and still meet all TikTok Shop standards. It has streamlined my daily tasks and boosted my productivity massively.",
+      text: "The quality of custom designs from Sun Design is outstanding. They understand e-commerce and create graphics that actually sell products. Highly recommended!",
     },
     {
       name: "Le Khac Duy",
       role: "E-commerce Entrepreneur",
       avatar: "/image3.jpg?height=48&width=48",
-      text: "Managing all my design orders and team members in one place is priceless. Sun Design keeps everything organized and my workflow stress-free. Exactly what every online seller needs!",
+      text: "Finding reliable designers for my TikTok Shop was challenging until I discovered Sun Design. Their POD designs are exactly what I need to stand out in the marketplace.",
     },
     {
       name: "Phan Van Anh",
       role: "Independent Seller",
       avatar: "/image4.jpg?height=48&width=48",
-      text: "As a solo seller, I love how Sun Design saves me hours every week. Quick orders, easy payments, smooth teamwork — it just works!",
+      text: "Sun Design's custom design service has been a game-changer for my Amazon business. Professional graphics, fast delivery, and excellent customer service.",
     },
     {
       name: "Le Tan Phat",
       role: "Sales Manager",
       avatar: "/image5.jpg?height=48&width=48",
-      text: "Sun Design makes my entire operation simpler — from submitting design requests to managing payments and feedback. It’s perfect for scaling my business without the usual chaos.",
+      text: "As a marketing manager, I need high-quality designs fast. Sun Design delivers exceptional custom graphics for all our campaigns. Their turnaround time and quality are unmatched.",
     },
   ];
 
@@ -130,10 +146,127 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
       <Head>
         <title>Sun Design - Save time for all design</title>
+
+        {/* Schema.org structured data */}
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Custom Design Services",
+            "description": "Professional custom design services for POD, print on demand, logo design, and digital marketing materials",
+            "provider": {
+              "@type": "Organization",
+              "name": "Sun Design",
+              "url": "https://sundesign.io"
+            },
+            "serviceType": "Graphic Design",
+            "areaServed": "Worldwide",
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Design Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "POD Design",
+                    "description": "Custom print on demand designs for e-commerce"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Logo Design",
+                    "description": "Professional logo design and brand identity"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Digital Marketing Design",
+                    "description": "Social media graphics and marketing materials"
+                  }
+                }
+              ]
+            }
+          }`}
+        </script>
+
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What custom design services do you offer?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We offer comprehensive custom design services including POD design, print on demand graphics, logo design, brand identity, social media graphics, and digital marketing materials."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does your POD design service work?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Simply submit your design brief, and our professional designers will create custom graphics for your print on demand products. We specialize in designs for TikTok Shop, Amazon, Shopify, Etsy, and other major platforms."
+                }
+              }
+            ]
+          }`}
+        </script>
+
+        {/* Basic meta tags */}
         <meta
           name="description"
-          content="All-in-one platform to help sellers manage and grow multiple TikTok Shops"
+          content="Professional custom design services for POD, print on demand, graphic design, logo design, and digital marketing materials. Fast delivery & expert designers."
         />
+        <meta
+          name="keywords"
+          content="custom design, POD design, print on demand design, graphic design services, logo design, banner design, design on demand, freelance designer"
+        />
+
+        {/* Open Graph tags */}
+        <meta
+          property="og:title"
+          content="Sun Design - Custom Design & POD Services"
+        />
+        <meta
+          property="og:description"
+          content="Expert custom design services for POD, e-commerce, and digital marketing. Professional designers, fast turnaround."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://sundesign.io" />
+        <meta property="og:site_name" content="Sun Design" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Sun Design - Custom Design & POD Services"
+        />
+        <meta
+          name="twitter:description"
+          content="Expert custom design services..."
+        />
+
+        {/* Canonical and robots */}
+        <link rel="canonical" href="https://sundesign.io" />
+        <meta name="robots" content="index, follow" />
+
+        {/* hreflang tags */}
+        <link rel="alternate" hrefLang="en" href="https://sundesign.io/" />
+        <link rel="alternate" hrefLang="vi" href="https://sundesign.io/" />
+        <link
+          rel="alternate"
+          hrefLang="x-default"
+          href="https://sundesign.io"
+        />
+
+        {/* Viewport for responsive design */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
       {/* Hero Section with Header */}
@@ -142,7 +275,6 @@ export default function Home() {
         <div className="absolute top-0 left-0 w-96 h-96 bg-blue-600 rounded-full opacity-10 blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-600 rounded-full opacity-10 blur-3xl"></div>
         <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-pink-600 rounded-full opacity-10 blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
-
         <div className="relative z-10 max-w-7xl mx-auto">
           {/* Header */}
           <header className="flex justify-between items-center mb-20">
@@ -151,6 +283,7 @@ export default function Home() {
                 <img
                   src="./logo.png"
                   className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded flex items-center justify-center"
+                  alt="Custom POD design example for print on demand products"
                 />
               </div>
               <span className="text-2xl font-bold">Sun Design</span>
@@ -175,15 +308,17 @@ export default function Home() {
               </div> */}
 
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                Save time,
+                Custom Design,
                 <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                  For all design.
+                  POD & Print on Demand
                 </span>
               </h1>
 
               <p className="text-xl text-gray-300 leading-relaxed max-w-lg">
-                All-in-one for design, order management, transaction management.
+                Professional custom design services for POD, e-commerce, and
+                digital marketing. From concept to completion - we bring your
+                ideas to life.
               </p>
 
               <div className="space-y-4">
@@ -213,36 +348,36 @@ export default function Home() {
               {/* 4 Ảnh chính */}
               <img
                 src="./person1.jpg"
-                alt="Person 1"
+                alt="Custom POD design example for print on demand products"
                 className="w-full rounded-2xl object-cover shadow-xl transform rotate-[-6deg]"
               />
               <img
                 src="./person4.jpg"
-                alt="Person 2"
+                alt="Custom POD design example for print on demand products"
                 className="w-full rounded-2xl object-cover shadow-xl transform rotate-[6deg] translate-y-6"
               />
               <img
                 src="./person3.jpg"
-                alt="Person 3"
+                alt="Custom POD design example for print on demand products"
                 className="w-full rounded-2xl object-cover shadow-xl transform rotate-[4deg] -translate-y-6"
               />
               <img
                 src="./person6.jpg"
-                alt="Person 4"
+                alt="Custom POD design example for print on demand products"
                 className="w-full rounded-2xl object-cover shadow-xl transform rotate-[-4deg]"
               />
 
               {/* Ảnh nhỏ bay top-left */}
               <img
                 src="./person5.jpg"
-                alt="Person 5"
+                alt="Custom POD design example for print on demand products"
                 className="absolute -top-10 -left-10 w-24 h-24 rounded-full object-cover shadow-lg border-4 border-white"
               />
 
               {/* Ảnh nhỏ bay bottom-right */}
               <img
                 src="./person2.jpg"
-                alt="Person 6"
+                alt="Custom POD design example for print on demand products"
                 className="absolute -bottom-10 -right-10 w-24 h-24 rounded-full object-cover shadow-lg border-4 border-white"
               />
             </div>
@@ -293,23 +428,91 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Turn every idea into a
               <br />
-              Masterpiece
+              Professional Design
             </h2>
+
             <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-12">
               You have the vision, you have the idea and we have the creative
-              team dedicated to making it happen.
-              <br />
-              Every design we create is a one-of-a-kind, just for you.
+              team dedicated to making it happen. Every custom design we create
+              is unique, tailored specifically for your print on demand
+              business.
             </p>
           </div>
 
           {/* Feature Cards */}
           <ImageSlider images={imagesAfterBefore} />
-          <p className="text-sm text-gray-300 leading-relaxed text-center mt-4">
+          {/* <p className="text-sm text-gray-300 leading-relaxed text-center mt-4">
             All-in-one for design, order management, transaction management.
             Designers securely connect their Google Drive via OAuth to upload
             and share files directly with customers.
-          </p>
+          </p> */}
+        </div>
+      </section>
+      <section className="px-8 py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Professional Design Services
+            </h2>
+            <p className="text-gray-300 text-lg">
+              Comprehensive design solutions for all your business needs
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-3xl p-8 text-center">
+              <div className="w-16 h-16 bg-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <span className="text-white text-2xl">🎨</span>
+              </div>
+              <h3 className="text-2xl font-bold mb-4">POD Design</h3>
+              <p className="text-gray-300">
+                Custom print on demand designs for TikTok Shop, Amazon, Shopify,
+                and Etsy. High-quality graphics that convert and sell.
+              </p>
+              <ul className="text-left mt-4 space-y-2 text-sm text-gray-400">
+                <li>• T-shirt designs</li>
+                <li>• Mug & merchandise graphics</li>
+                <li>• Product mockups</li>
+                <li>• Seasonal collections</li>
+              </ul>
+            </div>
+
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-3xl p-8 text-center">
+              <div className="w-16 h-16 bg-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <span className="text-white text-2xl">📱</span>
+              </div>
+              <h3 className="text-2xl font-bold mb-4">
+                Digital Marketing Design
+              </h3>
+              <p className="text-gray-300">
+                Eye-catching banners, social media graphics, and advertising
+                materials. Designed to boost engagement and conversions.
+              </p>
+              <ul className="text-left mt-4 space-y-2 text-sm text-gray-400">
+                <li>• Social media posts</li>
+                <li>• Ad banners</li>
+                <li>• YouTube thumbnails</li>
+                <li>• Email templates</li>
+              </ul>
+            </div>
+
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-3xl p-8 text-center">
+              <div className="w-16 h-16 bg-green-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <span className="text-white text-2xl">🏢</span>
+              </div>
+              <h3 className="text-2xl font-bold mb-4">Brand Identity Design</h3>
+              <p className="text-gray-300">
+                Complete branding solutions including logo design, brand
+                guidelines, and visual identity systems for your business.
+              </p>
+              <ul className="text-left mt-4 space-y-2 text-sm text-gray-400">
+                <li>• Logo design</li>
+                <li>• Brand guidelines</li>
+                <li>• Business cards</li>
+                <li>• Letterheads</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -358,7 +561,9 @@ export default function Home() {
                 </div>
               </div>
 
-              <h3 className="text-3xl font-bold text-center mb-8">Customer</h3>
+              <h3 className="text-3xl font-bold text-center mb-8">
+                Business Owner
+              </h3>
 
               {/* Features List */}
               <div className="space-y-4 mb-8">
@@ -370,18 +575,18 @@ export default function Home() {
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xs">📝</span>
+                    <span className="text-white text-xs">🎯</span>
                   </div>
                   <span className="text-gray-300">
-                    Order & Project Management
+                    Professional POD design services
                   </span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xs">💬</span>
+                    <span className="text-white text-xs">⚡</span>
                   </div>
                   <span className="text-gray-300">
-                    Realtime Comments & Feedback
+                    Fast turnaround & revisions
                   </span>
                 </div>
 
@@ -396,9 +601,11 @@ export default function Home() {
 
                 <div className="flex items-center space-x-3">
                   <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xs">📂</span>
+                    <span className="text-white text-xs">💼</span>
                   </div>
-                  <span className="text-gray-300">Custom Boards for Teams</span>
+                  <span className="text-gray-300">
+                    Complete project management
+                  </span>
                 </div>
 
                 <div className="flex items-center space-x-3">
@@ -434,7 +641,9 @@ export default function Home() {
                 </div>
               </div>
 
-              <h3 className="text-3xl font-bold text-center mb-8">Designer</h3>
+              <h3 className="text-3xl font-bold text-center mb-8">
+                Freelance Designer
+              </h3>
 
               {/* Features List */}
               <div className="space-y-4 mb-8">
@@ -449,9 +658,11 @@ export default function Home() {
 
                 <div className="flex items-center space-x-3">
                   <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xs">📤</span>
+                    <span className="text-white text-xs">🔗</span>
                   </div>
-                  <span className="text-gray-300">File Upload & Delivery</span>
+                  <span className="text-gray-300">
+                    Direct client connections
+                  </span>
                 </div>
 
                 <div className="flex items-center space-x-3">
@@ -465,10 +676,10 @@ export default function Home() {
 
                 <div className="flex items-center space-x-3">
                   <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xs">💵</span>
+                    <span className="text-white text-xs">💰</span>
                   </div>
                   <span className="text-gray-300">
-                    Earnings & Payout Control
+                    Steady design projects & income
                   </span>
                 </div>
 
@@ -563,6 +774,71 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="px-8 py-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              Our Custom Design Process
+            </h2>
+            <p className="text-white text-lg">
+              Simple, efficient, and results-driven design workflow
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
+                1
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-white">
+                Submit Brief
+              </h3>
+              <p className="text-white">
+                Tell us about your custom design needs, target audience, and
+                preferences
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
+                2
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-white">
+                Design Creation
+              </h3>
+              <p className="text-white">
+                Our expert designers create your custom graphics with attention
+                to detail
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
+                3
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-white">
+                Review & Revise
+              </h3>
+              <p className="text-white">
+                Review your design and request any revisions until it's perfect
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
+                4
+              </div>
+              <h3 className="text-xl font-bold mb-2 text-white">
+                Final Delivery
+              </h3>
+              <p className="text-white">
+                Receive your custom design in all required formats, ready to use
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <section className="px-8 py-20 bg-gradient-to-br from-indigo-900 via-blue-900 to-slate-900 text-white">
         <div className="max-w-7xl mx-auto">
@@ -652,7 +928,7 @@ export default function Home() {
                 <img
                   key={i}
                   src={src}
-                  alt="Brand logo"
+                  alt="Custom POD design example for print on demand products"
                   className="h-12 w-auto flex-shrink-0 object-contain opacity-80 hover:opacity-100 transition"
                 />
               ))}
@@ -678,6 +954,7 @@ export default function Home() {
               <img
                 src="./logo.png"
                 className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl"
+                alt="Custom POD design example for print on demand products"
               />
               <div>
                 <h3 className="text-2xl font-bold">Sun Design</h3>
@@ -719,26 +996,37 @@ export default function Home() {
                 >
                   <FaTiktok size={24} />
                 </a>
-
-                {/* Instagram */}
-                {/* <a
-                  href="https://www.instagram.com/yourinstagram"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                 className="hover:text-blue-500 transition-colors"
-                >
-                  <FaInstagram size={24} />
-                </a> */}
               </div>
             </div>
 
             {/* CTA */}
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-xl transition-colors duration-300 flex items-center space-x-2">
-              <a href="https://zalo.me/g/plkyoz146" target="_blank">
-                Get Started Today
-              </a>
-              <span>→</span>
-            </button>
+            <section className="px-8 py-20 text-white">
+              <div className="max-w-4xl mx-auto text-center">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                  Ready to Get Started with Custom Design?
+                </h2>
+                <p className="text-xl mb-8">
+                  Join thousands of businesses who trust Sun Design for their
+                  custom design needs. Professional POD designs, fast
+                  turnaround, unlimited revisions.
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href="https://sundesign.io/ideas"
+                    className="bg-white text-black font-semibold py-4 px-8 rounded-xl hover:bg-gray-100 transition-colors"
+                  >
+                    Order Custom Design Now
+                  </a>
+                  <a
+                    href="https://hub.sundesign.io/"
+                    className="border-2 border-white text-white font-semibold py-4 px-8 rounded-xl hover:bg-white hover:text-black  transition-colors"
+                  >
+                    View Design Portfolio
+                  </a>
+                </div>
+              </div>
+            </section>
 
             {/* Copyright */}
             <div className="pt-8 border-t border-gray-700 w-full">
